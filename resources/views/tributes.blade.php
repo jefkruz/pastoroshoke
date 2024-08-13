@@ -109,17 +109,17 @@
                     </div>
                     <!-- end: Blog -->
                     <!-- Pagination -->
-                    @if(!$tributes->count() ==0)
-                    <ul class="pagination">
-                        <li class="page-item"><a class="page-link" href="#"><i class="fa fa-angle-left"></i></a></li>
-                        <li class="page-item"><a class="page-link" href="#">1</a></li>
-                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-                        <li class="page-item active"><a class="page-link" href="#">3</a></li>
-                        <li class="page-item"><a class="page-link" href="#">4</a></li>
-                        <li class="page-item"><a class="page-link" href="#">5</a></li>
-                        <li class="page-item"><a class="page-link" href="#"><i class="fa fa-angle-right"></i></a></li>
-                    </ul>
-@endif
+{{--                    @if(!$tributes->count() ==0)--}}
+{{--                    <ul class="pagination">--}}
+{{--                        <li class="page-item"><a class="page-link" href="#"><i class="fa fa-angle-left"></i></a></li>--}}
+{{--                        <li class="page-item"><a class="page-link" href="#">1</a></li>--}}
+{{--                        <li class="page-item"><a class="page-link" href="#">2</a></li>--}}
+{{--                        <li class="page-item active"><a class="page-link" href="#">3</a></li>--}}
+{{--                        <li class="page-item"><a class="page-link" href="#">4</a></li>--}}
+{{--                        <li class="page-item"><a class="page-link" href="#">5</a></li>--}}
+{{--                        <li class="page-item"><a class="page-link" href="#"><i class="fa fa-angle-right"></i></a></li>--}}
+{{--                    </ul>--}}
+{{--                    @endif--}}
 
 
                     <!-- end: Pagination -->
@@ -130,7 +130,7 @@
                     <!--Tabs with Posts-->
                     <div class="widget ">
                         <h4 class="widget-title text-primary">Write A Tribute</h4>
-                        <form class="form-gray-fields">
+                        <form   action="{{route('submitTribute')}}" method="post" enctype="multipart/form-data">
                             @csrf
                             <div class="row">
                                 <div class="form-group col-md-12">
@@ -146,7 +146,7 @@
                             <div class="row">
                                 <div class="form-group col-md-12">
                                     <label for="subject">Phone Number</label>
-                                    <input type="text" name="phone_number" class="form-control" placeholder="Enter your phone number">
+                                    <input type="text" name="phone" class="form-control" placeholder="Enter your phone number">
                                 </div>
                                 <div class="form-group col-md-12">
                                     <label for="subject">City</label>
@@ -167,8 +167,13 @@
                             </div>
                             <div class="row">
                                 <div class="form-group col-md-12">
+                                    <label for="image">Upload Picture</label>
+                                    <input type="file" name="image" class="form-control"accept="image/*" >
+                                </div>
+
+                                <div class="form-group col-md-12">
                                     <label for="subject">Upload Video</label>
-                                    <input type="file" name="video" class="form-control" >
+                                    <input type="file" name="video" class="form-control" accept="video/mp4">
                                 </div>
 
                             </div>
