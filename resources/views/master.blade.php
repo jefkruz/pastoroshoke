@@ -19,40 +19,52 @@
     <!-- Body Inner -->
     <div class="body-inner">
 
+        <!-- Topbar -->
+
+        <!-- end: Topbar -->
+
         <!-- Header -->
-        <header id="header" data-transparent="true" data-fullwidth="true" class="header-always-fixed dark">
+        <header id="header" data-fullwidth="true">
             <div class="header-inner">
                 <div class="container">
                     <!--Logo-->
-                    <div id="logo">
-                        <a href="{{route('index')}}" data-src-responsive="images/logo.png" class="logo">
-                            <img src="images/logo-dark.png" alt="Polo Logo">
-                        </a>
-                    </div>
+                    <div id="logo"> <a href="index.html"><span class="logo-default">POI</span><span class="logo-dark">POLO</span></a> </div>
                     <!--End: Logo-->
-
-                    <!--Header Extras-->
-                    <div class="header-extras">
-                        <ul>
-                            <li>
-                                <!--overlay menu-->
-                                <a id="menu-overlay-trigger" href="#" class="lines-button x toggle-item" data-target="body" data-class="menu-overlay-active">
-                                    <span class="lines"></span>
-                                </a>
-                                <!--end: overlay menu-->
-                            </li>
-                        </ul>
+                    <!-- Search -->
+                    <div id="search"><a id="btn-search-close" class="btn-search-close" aria-label="Close search form"><i class="icon-x"></i></a>
+                        <form class="search-form" action="search-results-page.html" method="get">
+                            <input class="form-control" name="q" type="text" placeholder="Type & Search..." />
+                            <span class="text-muted">Start typing & press "Enter" or "ESC" to close</span>
+                        </form>
                     </div>
+                    <!-- end: search -->
+                    <!--Header Extras-->
+{{--                    <div class="header-extras">--}}
+{{--                        <ul>--}}
+{{--                            <li>--}}
+{{--                                <a id="btn-search" href="#"> <i class="icon-search"></i></a>--}}
+{{--                            </li>--}}
+{{--                            <li>--}}
+{{--                                <div class="p-dropdown"> <a href="#"><i class="icon-globe"></i><span>EN</span></a>--}}
+{{--                                    <ul class="p-dropdown-content">--}}
+{{--                                        <li><a href="#">French</a></li>--}}
+{{--                                        <li><a href="#">Spanish</a></li>--}}
+{{--                                        <li><a href="#">English</a></li>--}}
+{{--                                    </ul>--}}
+{{--                                </div>--}}
+{{--                            </li>--}}
+{{--                        </ul>--}}
+{{--                    </div>--}}
                     <!--end: Header Extras-->
-
+                    <!--Navigation Resposnive Trigger-->
+                    <div id="mainMenu-trigger"> <a class="lines-button x"><span class="lines"></span></a> </div>
+                    <!--end: Navigation Resposnive Trigger-->
                     <!--Navigation-->
-                    <div id="mainMenu" class="menu-overlay menu-light menu-onclick">
+                    <div id="mainMenu">
                         <div class="container">
                             <nav>
                                 <ul>
                                     <li><a href="{{route('index')}}">Home</a></li>
-                                    <li><a href="{{route('tributes')}}">Tributes</a></li>
-
 
                                 </ul>
                             </nav>
@@ -65,47 +77,69 @@
         <!-- end: Header -->
 
         <!-- Inspiro Slider -->
-        <div id="slider" class="inspiro-slider slider-fullscreen dots-creative" data-height-xs="360">
+        <div id="slider" class="inspiro-slider slider-halfscreen dots-dark arrows-dark dots-creative" data-fade="true" data-height-xs="360">
 
             <!-- Slide 1 -->
-            <div class="slide" style="background-image:url('images/1.png');">
+            <div class="slide background-image" style="background-image:url('images/slide1.png');">
                 <div class="container">
                     <div class="slide-captions text-end">
                         <!-- Captions -->
-                        <h3 class="m-b-0 text-light">Welcome, this is a tribute platform for</h3>
-
-                        <h2 class="text-lg m-b-10 text-light">PASTOR OSHOKE<br />IMOAGENE</h2>
-                        <h4 class="text-light">1970 - 2024</h4>
-                        <div>
-                            <a class="btn btn-light btn-outline" href="{{route('tributes')}}"><span>Send Tribute</span></a>
-                        </div>
+                        <span class="strong text-dark">Welcome, this is a tribute platform for</span>
+                        <h2 class="text-dark text-lg">ESTEEMED PASTOR <br>OSHOKE IMOAGENE</h2>
+                        <span class="strong text-dark">1970 - 2024</span>
+                        <a  href="{{route('tributes')}}" class="btn btn-dark">SEND TRIBUTE</a>
                         <!-- end: Captions -->
                     </div>
                 </div>
-
             </div>
             <!-- end: Slide 1 -->
 
-        </div>
-        <!--end: Inspiro Slider -->
-
-        <!-- ABOUT AGENCY -->
-        <section class="text-light p-t-150 background-black">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="heading-text heading-section text-center">
-                            <h2 class="text-medium fw-100">A Soldier Called Home!</h2>
-                        </div>
-                        <img src="{{asset('images/tribute.png')}}" class="img-thumbnail">
-
+            <!-- Slide 2 -->
+            <div class="slide" style="background-image:url('images/slide2.png');">
+                <div class="container">
+                    <div class="slide-captions text-end">
+                        <!-- Captions -->
+                        <span class="strong text-dark">Welcome, this is a tribute platform for</span>
+                        <h2 class="text-dark text-lg">ESTEEMED PASTOR <br>OSHOKE IMOAGENE</h2>
+                        <span class="strong text-dark">1970 - 2024</span>
+                        <a  href="{{route('tributes')}}" class="btn btn-dark">SEND TRIBUTE</a>
+                        <!-- end: Captions -->
                     </div>
-
-
                 </div>
             </div>
+            <!-- end: Slide 2 -->
+
+
+        </div>
+        <!--end: Inspiro Slider -->
+        <section>
+            <div class="container">
+                <div class="row  m-b-50">
+                    <div class="col-lg-3">
+                        <div class="heading-text heading-section">
+                            <h2>ABOUT</h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-9">
+                        <div class="row">
+                            <div class="col-lg-6">We celebrate the life and times of a kingdom addict, trail blazer, a decorated disciple of the Ministry, a man so full of love and so effusive of love, <strong>Highly Esteemed Pastor Oshoke Imoagene,</strong> who was the <strong>2nd Haven President of The Haven Nation from 2007 to 2015,</strong> went to be with the Lord on <strong>Tuesday July 23, 2024.</strong><br>
+                                <br> Pastor Oshoke became a member of the Ministry in <strong>Ibadan in 1995.</strong> He joined The Haven in then CE Ibadan same year and became <strong>The Haven Governor CE Ibadan in 1997.</strong><br>
+                                He relocated to Lagos in 1999 and continued to be an active member of the Ministry in then CE Ikeja where he also continued his passionate membership of The Haven Nation.</div>
+                            <div class="col-lg-6">Pastor Oshoke was appointed the Governor of the highly celebrated and award-winning Chosen Haven Chapter of CE Ikeja in February 2005.<br>
+                                <br>He was appointed as International President of <strong>The Haven on Friday 26, 2007,</strong> and creditably led The Haven Nation in that capacity <strong>till July 2015.</strong><br>
+                                Pastor Oshoke’s life in God’s Word was legendary. His devotion and passion for the message of our Man of God were qualities many in Ministry particularly in The Haven Nation emulated.<br>
+                                Pastor Oshoke was a devoted husband and a loving father who gave all for his family.<br>
+                                We thank God for His dedicated life of service to the Lord and the Ministry.<br>
+                                The impact he made will continue to be with us.
+                                </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </section>
-        <!-- end: ABOUT AGENCY -->
+
+
 
         <!-- GET IN TOUCH -->
         <section class="text-light background-black">
