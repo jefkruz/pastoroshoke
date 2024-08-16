@@ -229,7 +229,7 @@
                     <div class="portfolio-item img-zoom ct-photography ct-media ct-branding ct-Media">
                         <div class="portfolio-item-wrap">
                             <div class="portfolio-image">
-                                <a href="#"><img src="{{$image->url}}" style="max-height: 60px" alt=""></a>
+                                <a href="#"><img src="{{$image->url}}" style="max-height: 300px" alt=""></a>
                             </div>
                             <div class="portfolio-description">
                                 <a title="Paper Pouch!" data-lightbox="gallery-image" href="{{$image->url}}" class="btn btn-light btn-roundeded">Zoom</a>
