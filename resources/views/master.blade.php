@@ -13,6 +13,9 @@
     <!-- Stylesheets & Fonts -->
     <link href="{{asset('css/plugins.css')}}" rel="stylesheet">
     <link href="{{asset('css/style.css')}}" rel="stylesheet">
+    <style>
+
+    </style>
 </head>
 
 <body>
@@ -28,15 +31,10 @@
             <div class="header-inner">
                 <div class="container">
                     <!--Logo-->
-                    <div id="logo"> <a href="index.html"><span class="logo-default">POI</span><span class="logo-dark">POLO</span></a> </div>
+                    <div id="logo"> <a href="index.html"><span class="logo-default">POI</span><span class="logo-dark">POI</span></a> </div>
                     <!--End: Logo-->
                     <!-- Search -->
-                    <div id="search"><a id="btn-search-close" class="btn-search-close" aria-label="Close search form"><i class="icon-x"></i></a>
-                        <form class="search-form" action="search-results-page.html" method="get">
-                            <input class="form-control" name="q" type="text" placeholder="Type & Search..." />
-                            <span class="text-muted">Start typing & press "Enter" or "ESC" to close</span>
-                        </form>
-                    </div>
+
                     <!-- end: search -->
                     <!--Header Extras-->
 {{--                    <div class="header-extras">--}}
@@ -77,7 +75,7 @@
         <!-- end: Header -->
 
         <!-- Inspiro Slider -->
-        <div id="slider" class="inspiro-slider slider-halfscreen dots-dark arrows-dark dots-creative" data-fade="true" data-height-xs="360">
+        <div id="slider" class="inspiro-slider slider-fullscreen dots-dark arrows-dark dots-creative" data-fade="true" >
 
             <!-- Slide 1 -->
             <div class="slide background-image" style="background-image:url('images/slide1.png');">
