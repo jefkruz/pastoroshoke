@@ -94,7 +94,7 @@
             <!-- end: Slide 1 -->
 
             <!-- Slide 2 -->
-            <div class="slide" style="background-image:url('images/slide2.png');">
+            <div class="slide" style="background-image:url('images/slide1.png');">
                 <div class="container">
                     <div class="slide-captions text-end">
                         <!-- Captions -->
