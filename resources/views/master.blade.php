@@ -176,26 +176,7 @@
                                             </div>
                                         </form>
 
-                                        <div class="carousel" data-items="3" data-dots="false" data-lightbox="gallery">
-                                            <!-- portfolio item -->
-                                            @foreach($images as $image)
-                                            <div class="portfolio-item img-zoom ct-photography ct-media ct-branding ct-Media">
-                                                <div class="portfolio-item-wrap">
-                                                    <div class="portfolio-image">
-                                                        <a href="#"><img src="{{ $image->url }}" alt=""></a>
-                                                    </div>
-                                                    <div class="portfolio-description">
-                                                        <a title="POI" data-lightbox="gallery-image" href="{{ $image->url }}" class="btn btn-light btn-roundeded">Zoom</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                             @endforeach
-                                            <!-- end: portfolio item -->
 
-                                        </div>
-                                        <!-- Gallery -->
-
-                                        <!-- end: Gallery -->
                                     </div>
                                 </div>
                                 <div class="tab-pane fade" id="contact3" role="tabpanel" aria-labelledby="contact-tab">
