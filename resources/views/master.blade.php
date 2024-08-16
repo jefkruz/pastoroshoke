@@ -229,7 +229,7 @@
                     <div class="portfolio-item img-zoom ct-photography ct-media ct-branding ct-Media">
                         <div class="portfolio-item-wrap">
                             <div class="portfolio-image">
-                                <a href="#"><img src="{{$image->url}}" alt=""></a>
+                                <a href="#"><img src="{{$image->url}}" style="max-height: 60px" alt=""></a>
                             </div>
                             <div class="portfolio-description">
                                 <a title="Paper Pouch!" data-lightbox="gallery-image" href="{{$image->url}}" class="btn btn-light btn-roundeded">Zoom</a>
@@ -261,7 +261,7 @@
 {{--                                                Comments</a></span>--}}
                                 <h2><a href="{{route('readTributes',$post->id)}}">{{ ucwords($post->first_name .' ' . $post->last_name) }}</a></h2>
                                 <p>
-                                    {{ \Illuminate\Support\Str::words($post->tribute, 150, '...') }}
+                                    {{ (Str::limit($post->tribute, 150)) }}
                                 </p>
                                 <a href="{{route('readTributes',$post->id)}}" class="item-link">Read More <i class="icon-chevron-right"></i></a>
                             </div>
