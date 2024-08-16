@@ -75,7 +75,8 @@
         <!-- end: Header -->
 
         <!-- Inspiro Slider -->
-        <div id="slider" class="inspiro-slider slider-fullscreen dots-dark arrows-dark dots-creative" data-fade="true" >
+        <div id="slider" class="inspiro-slider slider-halfscreen dots-dark arrows-dark dots-creative" data-fade="true" >
+
 
             <!-- Slide 1 -->
             <div class="slide background-image" style="background-image:url('images/slide1.png');">
@@ -110,31 +111,178 @@
 
         </div>
         <!--end: Inspiro Slider -->
+        <section id="page-content" class="no-padding">
+
+            <div class="container">
+                <div class="row">
+                    <div class="content col-lg-12">
+{{--                        <h4>Tabs - Folder</h4>--}}
+                        <div class="tabs tabs-folder">
+                            @if(session('message'))
+                                <div role="alert" class="alert alert-success alert-dismissible">
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"> </button>
+                                    <strong><i class="fa fa-check-circle"></i> Thank You!</strong> {{session('message')}} </div>
+                            @endif
+                            <ul class="nav nav-tabs nav-justified" id="myTab3" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" id="home-tab" data-bs-toggle="tab" href="#home3" role="tab" aria-controls="home" aria-selected="true"><b>About</b></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="profile-tab" data-bs-toggle="tab" href="#profile3" role="tab" aria-controls="profile" aria-selected="false"><b>Gallery</b></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="contact-tab" data-bs-toggle="tab" href="#contact3" role="tab" aria-controls="contact" aria-selected="false"><b>Videos</b></a>
+                                </li>
+
+                            </ul>
+                            <div class="tab-content" id="myTabContent3">
+                                <div class="tab-pane fade show active" id="home3" role="tabpanel" aria-labelledby="home-tab">
+                                    <div class="row  m-b-50">
+                                        <div class="col-lg-3">
+                                            <div class="heading-text heading-section">
+                                                <h2>ABOUT</h2>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-9">
+                                            <div class="row">
+                                                <div class="col-lg-6">We celebrate the life and times of a kingdom addict, trail blazer, a decorated disciple of the Ministry, a man so full of love and so effusive of love, <strong>Highly Esteemed Pastor Oshoke Imoagene,</strong> who was the <strong>2nd Haven President of The Haven Nation from 2007 to 2015,</strong> went to be with the Lord on <strong>Tuesday July 23, 2024.</strong><br>
+                                                    <br> Pastor Oshoke became a member of the Ministry in <strong>Ibadan in 1995.</strong> He joined The Haven in then CE Ibadan same year and became <strong>The Haven Governor CE Ibadan in 1997.</strong><br>
+                                                    He relocated to Lagos in 1999 and continued to be an active member of the Ministry in then CE Ikeja where he also continued his passionate membership of The Haven Nation.</div>
+                                                <div class="col-lg-6">Pastor Oshoke was appointed the Governor of the highly celebrated and award-winning Chosen Haven Chapter of CE Ikeja in February 2005.<br>
+                                                    <br>He was appointed as International President of <strong>The Haven on Friday 26, 2007,</strong> and creditably led The Haven Nation in that capacity <strong>till July 2015.</strong><br>
+                                                    Pastor Oshoke’s life in God’s Word was legendary. His devotion and passion for the message of our Man of God were qualities many in Ministry particularly in The Haven Nation emulated.<br>
+                                                    Pastor Oshoke was a devoted husband and a loving father who gave all for his family.<br>
+                                                    We thank God for His dedicated life of service to the Lord and the Ministry.<br>
+                                                    The impact he made will continue to be with us.
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="profile3" role="tabpanel" aria-labelledby="profile-tab">
+
+                                    <div class="container">
+                                        <form method="POST"  action="{{route('uploadImages')}}" enctype="multipart/form-data">
+                                            @csrf
+                                            <h4>Upload your Images Here</h4>
+                                            <div class="row">
+                                                <div class="form-group col-md-9">
+                                                    <input type="file" name="images[]" class="form-control" accept="image/*" multiple >
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <button type="submit" class="btn btn-primary">SUBMIT</button>
+                                                </div>
+                                            </div>
+                                        </form>
+
+                                        <div class="carousel" data-items="3" data-dots="false" data-lightbox="gallery">
+                                            <!-- portfolio item -->
+                                            @foreach($images as $image)
+                                            <div class="portfolio-item img-zoom ct-photography ct-media ct-branding ct-Media">
+                                                <div class="portfolio-item-wrap">
+                                                    <div class="portfolio-image">
+                                                        <a href="#"><img src="{{ $image->url }}" alt=""></a>
+                                                    </div>
+                                                    <div class="portfolio-description">
+                                                        <a title="POI" data-lightbox="gallery-image" href="{{ $image->url }}" class="btn btn-light btn-roundeded">Zoom</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                             @endforeach
+                                            <!-- end: portfolio item -->
+
+                                        </div>
+                                        <!-- Gallery -->
+
+                                        <!-- end: Gallery -->
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="contact3" role="tabpanel" aria-labelledby="contact-tab">
+                                    <form method="POST"  action="{{route('uploadVideos')}}"  enctype="multipart/form-data">
+                                        @csrf
+                                        <h4>Upload your Videos Here</h4>
+                                        <div class="row">
+                                            <div class="form-group col-md-9">
+                                                <input type="file" name="video" class="form-control"  required accept="video/mp4">
+                                            </div>
+                                            <div class="form-group col-md-3">
+                                                <button type="submit" class="btn btn-primary">SUBMIT</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <div class="row">
+                                        @foreach($videos as $video)
+                                            <div class="col-md-4">
+                                                <div class="card mb-4">
+                                                    <div class="card-body">
+                                                        <video width="100%" controls>
+                                                            <source src="{{ $video->url }}" type="video/mp4">
+                                                            Your browser does not support the video tag.
+                                                        </video>
+                                                    </div>
+                                                    <div class="card-footer">
+                                                        <h5>Video {{ $loop->iteration }}</h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        @endforeach
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="space"></div>
+
+
+                    </div>
+                    <!-- Sidebar-->
+
+                </div>
+            </div>
+        </section>
+        <section id="page-content">
+            <div class="container">
+                <!-- Gallery -->
+                <div class="grid-layout grid-3-columns" data-margin="20" data-item="grid-item" data-lightbox="gallery">
+                    @foreach($images as $image)
+                    <div class="grid-item">
+                        <a class="image-hover-zoom" href="{{$image->url}}" data-lightbox="gallery-image"><img src="{{$image->url}}"></a>
+                    </div>
+                    @endforeach
+                </div>
+                <!-- end: Gallery -->
+            </div>
+        </section>
         <section>
             <div class="container">
-                <div class="row  m-b-50">
-                    <div class="col-lg-3">
-                        <div class="heading-text heading-section">
-                            <h2>ABOUT</h2>
-                        </div>
-                    </div>
-                    <div class="col-lg-9">
-                        <div class="row">
-                            <div class="col-lg-6">We celebrate the life and times of a kingdom addict, trail blazer, a decorated disciple of the Ministry, a man so full of love and so effusive of love, <strong>Highly Esteemed Pastor Oshoke Imoagene,</strong> who was the <strong>2nd Haven President of The Haven Nation from 2007 to 2015,</strong> went to be with the Lord on <strong>Tuesday July 23, 2024.</strong><br>
-                                <br> Pastor Oshoke became a member of the Ministry in <strong>Ibadan in 1995.</strong> He joined The Haven in then CE Ibadan same year and became <strong>The Haven Governor CE Ibadan in 1997.</strong><br>
-                                He relocated to Lagos in 1999 and continued to be an active member of the Ministry in then CE Ikeja where he also continued his passionate membership of The Haven Nation.</div>
-                            <div class="col-lg-6">Pastor Oshoke was appointed the Governor of the highly celebrated and award-winning Chosen Haven Chapter of CE Ikeja in February 2005.<br>
-                                <br>He was appointed as International President of <strong>The Haven on Friday 26, 2007,</strong> and creditably led The Haven Nation in that capacity <strong>till July 2015.</strong><br>
-                                Pastor Oshoke’s life in God’s Word was legendary. His devotion and passion for the message of our Man of God were qualities many in Ministry particularly in The Haven Nation emulated.<br>
-                                Pastor Oshoke was a devoted husband and a loving father who gave all for his family.<br>
-                                We thank God for His dedicated life of service to the Lord and the Ministry.<br>
-                                The impact he made will continue to be with us.
-                                </div>
-                        </div>
-                    </div>
-                </div>
 
+                <div class="carousel" data-items="3">
+                    <!-- Post item-->
+                    @foreach($tributes as $post)
+                    <div class="post-item border">
+                        <div class="post-item-wrap">
+{{--                            <div class="post-image">--}}
+{{--                                <a href="#">--}}
+{{--                                    <img alt="" src="images/blog/12.jpg"></a>--}}
+{{--                            </div>--}}
+                            <div class="post-item-description">
+                                <span class="post-meta-date"><i class="fa fa-calendar-o"></i>{{ $post->created_at->format('M d, Y') }}</span>
+{{--                                <span class="post-meta-comments"><a href=""><i class="fa fa-comments-o"></i>0--}}
+{{--                                                Comments</a></span>--}}
+                                <h2><a href="{{route('readTributes',$post->id)}}">{{ ucwords($post->first_name .' ' . $post->last_name) }}</a></h2>
+                                <p>
+                                    {{ \Illuminate\Support\Str::words($post->tribute, 150, '...') }}
+                                </p>
+                                <a href="{{route('readTributes',$post->id)}}" class="item-link">Read More <i class="icon-chevron-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+                    <!-- end: Post item-->
+
+                </div>
             </div>
+
         </section>
 
 
@@ -194,18 +342,7 @@
                                 <label for="message">Tribute<span class="text-danger">*</span></label>
                                 <textarea type="text" name="tribute" rows="8" class="form-control" placeholder="Write your Tribute"></textarea>
                             </div>
-                            <div class="row">
-                                <div class="form-group col-md-6">
-                                    <label for="image">Upload Picture</label>
-                                    <input type="file" name="image" class="form-control"accept="image/*" >
-                                </div>
 
-                                <div class="form-group col-md-6">
-                                    <label for="subject">Upload Video</label>
-                                    <input type="file" name="video" class="form-control" accept="video/mp4">
-                                </div>
-
-                            </div>
                             <div class="row">
                                 <div class="form-group text-center">
                                     <button class="btn center" type="submit" ><i class="fa fa-paper-plane"></i>&nbsp;Send Tribute</button>

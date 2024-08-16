@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Image;
 use App\Models\Post;
+use App\Models\Video;
 use Illuminate\Http\Request;
 
 class MainController extends Controller
@@ -11,8 +13,10 @@ class MainController extends Controller
 
     public function index()
     {
-
-        return view('master');
+        $data['tributes'] = Post::latest()->get();
+        $data['images'] = Image::all();
+        $data['videos'] = Video::all();
+        return view('master',$data);
     }
 
     public function tributes()
@@ -31,14 +35,54 @@ class MainController extends Controller
         return view('view_tributes', $data);
     }
 
+    public function uploadImages(Request $request)
+    {
+        $request->validate([
+            'images.*' => 'required|image|mimes:jpeg,png,jpg,gif|max:10240',
+        ]);
+
+        $imagePaths = [];
+
+        if ($request->hasFile('images')) {
+            foreach ($request->file('images') as $image) {
+                $imagePath = $image->store('uploads', env('DEFAULT_DISK'));
+                Image::create([
+                    'url' => $imagePath ? asset($imagePath) : null,
+                ]);
+            }
+        }
+
+        // Handle the image paths as needed (e.g., save to database)
+
+        return back()->with('message', 'Images uploaded successfully!');
+    }
+
+    public function uploadVideo(Request $request)
+    {
+        // Validate the video input (max 500MB and only MP4 format allowed)
+        $request->validate([
+            'video' => 'required|mimes:mp4|max:512000', // max file size in KB (500MB)
+        ]);
+
+        // Check if a video is uploaded
+        if ($request->hasFile('video')) {
+            // Store the video
+            $videoPath = $request->file('video')->store('videos', env('DEFAULT_DISK'));
+
+            // Create a new record in the videos table (assuming you have a Video model)
+            Video::create([
+                'url' => $videoPath ? asset($videoPath) : null,
+            ]);
+        }
+
+        return redirect()->back()->with('message', 'Video uploaded successfully!');
+    }
+
+
     public function submitTribute(Request $request)
     {
 
-        $messages = [
-            'video.mimes' => 'The video must be a file of type: mp4.',
-            'video.max' => 'The video must not be greater than 500MB.',
-            'image.max' => 'The image must not be greater than 10MB.',
-        ];
+
 
      $request->validate([
          'first_name' => 'required',
@@ -48,22 +92,9 @@ class MainController extends Controller
          'state' => 'required',
          'country' => 'required',
          'tribute' => 'required',
-         'video' => 'nullable|mimes:mp4|max:512000',  // Validate that the video is an MP4 and max 500MB
-         'image' => 'nullable|image|max:10240', // Optional: Validate image with a max size of 10MB
+     ]);
 
-     ],$messages);
 
-        $videopath = null;
-        $imagepath = null;
-        if($request->hasFile('video')){
-            $video = $request->file('video');
-            $videopath = $video->store('videos', env('DEFAULT_DISK'));
-        }
-
-        if($request->hasFile('image')){
-            $image = $request->file('image');
-            $imagepath = $image->store('uploads', env('DEFAULT_DISK'));
-        }
 
         $post = new Post();
         $post->first_name = $request->first_name;
@@ -73,8 +104,6 @@ class MainController extends Controller
         $post->state = $request->state;
         $post->country = $request->country;
         $post->tribute = $request->tribute;
-        $post->video = $videopath ? asset($videopath) : null;
-        $post->image = $imagepath ? asset($imagepath) : null;
         $post->save();
         return to_route('tributes')->with('message', 'Tribute sent successfully');
     }
