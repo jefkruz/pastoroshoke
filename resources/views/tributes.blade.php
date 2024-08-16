@@ -165,13 +165,7 @@
                                 <label for="message">Tribute</label>
                                 <textarea type="text" name="widget-contact-form-message" rows="8" class="form-control required" placeholder="Write your Tribute"></textarea>
                             </div>
-                            <div class="row">
-                                <div class="form-group col-md-12">
-                                    <label for="image">Upload Picture</label>
-                                    <input type="file" name="image" class="form-control"accept="image/*" >
-                                </div>
 
-                            </div>
                             <div class="row">
                                 <div class="col-lg-12">
                                     <div class="form-group text-center">

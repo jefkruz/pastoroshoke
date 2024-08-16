@@ -94,9 +94,7 @@ class MainController extends Controller
          'tribute' => 'required',
      ]);
 
-
-
-        $post = new Post();
+     $post = new Post();
         $post->first_name = $request->first_name;
         $post->last_name = $request->last_name;
         $post->phone = $request->phone;
