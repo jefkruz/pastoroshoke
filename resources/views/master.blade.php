@@ -169,7 +169,7 @@
                                             @csrf
                                             <h4>Upload your Images Here</h4>
                                             <div role="alert" class="alert alert-primary alert-dismissible">
-                                                <strong><i class=""></i>Please Note!</strong> Maximum  Imageupload size is 10mb.
+                                                <strong><i class=""></i>Please Note!</strong> Maximum  Image upload size is 10mb.
                                             </div>
 
 
