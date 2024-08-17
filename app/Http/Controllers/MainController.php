@@ -63,7 +63,7 @@ class MainController extends Controller
         $request->validate([
             'video' => 'required|mimes:mp4|max:512000', // max file size in KB (500MB)
         ]);
-dd($request);
+
         // Check if a video is uploaded
         if ($request->hasFile('video')) {
             // Store the video
