@@ -69,9 +69,8 @@ class MainController extends Controller
             // Store the video
             $videoPath = $request->file('video')->store('videos', env('DEFAULT_DISK'));
 
-            // Create a new record in the videos table (assuming you have a Video model)
             Video::create([
-                'url' => $videoPath ? asset($videoPath) : null,
+                'url' => asset($videoPath),
             ]);
         }
 
