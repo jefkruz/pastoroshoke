@@ -145,12 +145,14 @@
                                         </div>
                                         <div class="col-lg-9">
                                             <div class="row">
-                                                <div class="col-lg-6">We celebrate the life and times of a kingdom addict, trail blazer, a decorated disciple of the Ministry, a man so full of love and so effusive of love, <strong>Highly Esteemed Pastor Oshoke Imoagene,</strong> who was the <strong>2nd Haven President of The Haven Nation from 2007 to 2015,</strong> went to be with the Lord on <strong>Tuesday July 23, 2024.</strong><br>
-                                                    <br> Pastor Oshoke became a member of the Ministry in <strong>Ibadan in 1995.</strong> He joined The Haven in then CE Ibadan same year and became <strong>The Haven Governor CE Ibadan in 1997.</strong><br>
-                                                    He relocated to Lagos in 1999 and continued to be an active member of the Ministry in then CE Ikeja where he also continued his passionate membership of The Haven Nation.</div>
-                                                <div class="col-lg-6">Pastor Oshoke was appointed the Governor of the highly celebrated and award-winning Chosen Haven Chapter of CE Ikeja in February 2005.<br>
-                                                    <br>He was appointed as International President of <strong>The Haven on Friday 26, 2007,</strong> and creditably led The Haven Nation in that capacity <strong>till July 2015.</strong><br>
-                                                    Pastor Oshoke’s life in God’s Word was legendary. His devotion and passion for the message of our Man of God were qualities many in Ministry particularly in The Haven Nation emulated.<br>
+                                                <div class="col-lg-6">We celebrate the life and times of a kingdom addict, trail blazer, a decorated disciple of the Ministry, a man so full of love and so effusive of love, <strong>Highly Esteemed Pastor Oshoke Imoagene,</strong> who was the <strong>2nd Haven President of The Haven Nation from 2007 to 2015,</strong> went to be with the Lord on <strong>Tuesday July 23, 2024. </strong><br>
+                                                    <br>Pastor Oshoke was born on the <strong>9th of June 1970</strong> at <strong>Ibadan, Oyo State.</strong> <br> He was a very studious, hardworking and trail blazing student who went through school with excellent academic performances, bagging his BA in History at the age of 19 and his master’s degree in Industrial Labour Relations before he turned 22 <br><br>
+                                                    Pastor Oshoke’s fast growth was also evidenced in his career. Kicking off in 1991, he rose quickly through the ranks in Human Resource Management and by 2008, he had become the Divisional Head, Human Capital Management and Corporate Resources at one of the notable banks in Nigeria. It is worthy of note that Pastor Oshoke mentored a great number of people in the banking industry, helping them find their feet and kick off their stellar careers.</div>
+                                                <div class="col-lg-6">Pastor Oshoke became a member of Christ Embassy in <strong>Ibadan in 1995.</strong> He joined The Haven that same year and became The Haven Governor, <strong>CE Ibadan in 1997.</strong><br>
+                                                    He relocated to Lagos in 1999, where he continued his passionate membership of The Haven Nation at the then Christ Embassy Ikeja. In February 2005, Pastor Oshoke was appointed the Governor of the highly celebrated and award-winning Chosen Haven Chapter. <br>
+                                                    He was appointed as International President of The Haven on <strong>Friday 26, 2007,</strong> and creditably led The Haven Nation in that capacity till <strong>July 2015.</strong><br>
+                                                    Pastor Oshoke’s life in God’s Word was legendary. His devotion and passion for the message of our Man of God were qualities many in Ministry particularly in The Haven Nation emulated.
+                                                    <br><br>
                                                     Pastor Oshoke was a devoted husband and a loving father who gave all for his family.<br>
                                                     We thank God for His dedicated life of service to the Lord and the Ministry.<br>
                                                     The impact he made will continue to be with us.
@@ -166,6 +168,11 @@
                                         <form method="POST"  action="{{route('uploadImages')}}" enctype="multipart/form-data">
                                             @csrf
                                             <h4>Upload your Images Here</h4>
+                                            <div role="alert" class="alert alert-primary alert-dismissible">
+                                                <strong><i class=""></i>Please Note!</strong> Maximum  Imageupload size is 10mb.
+                                            </div>
+
+
                                             <div class="row">
                                                 <div class="form-group col-md-9">
                                                     <input type="file" name="images[]" class="form-control" accept="image/*" multiple >
@@ -180,6 +187,9 @@
                                     </div>
                                 </div>
                                 <div class="tab-pane fade" id="contact3" role="tabpanel" aria-labelledby="contact-tab">
+                                    <div role="alert" class="alert alert-primary alert-dismissible">
+                                        <strong><i class="fa fa-warning"></i>Please Note!</strong> Maximum  video upload size is 500mb and MP4 format only.
+                                    </div>
                                     <form method="POST"  action="{{route('uploadVideos')}}"  enctype="multipart/form-data">
                                         @csrf
                                         <h4>Upload your Videos Here</h4>
