@@ -261,10 +261,10 @@
                     @foreach($tributes as $post)
                     <div class="post-item border">
                         <div class="post-item-wrap">
-{{--                            <div class="post-image">--}}
-{{--                                <a href="#">--}}
-{{--                                    <img alt="" src="images/blog/12.jpg"></a>--}}
-{{--                            </div>--}}
+                            <div class="post-image">
+                                <a href="#">
+                                    <img alt="" src="{{url('images/default.png')}}"></a>
+                            </div>
                             <div class="post-item-description">
                                 <span class="post-meta-date"><i class="fa fa-calendar-o"></i>{{ $post->created_at->format('M d, Y') }}</span>
 {{--                                <span class="post-meta-comments"><a href=""><i class="fa fa-comments-o"></i>0--}}

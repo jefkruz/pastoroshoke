@@ -86,7 +86,7 @@
                                 <div class="post-item-wrap">
                                     <div class="post-image">
                                         <a href="{{route('readTributes',$post->id)}}">
-                                            <img alt="{{ $post->first_name }}" src="{{ $post->image ? asset($post->image) : 'images/default.jpg' }}">
+                                            <img alt="{{ $post->first_name }}" src="{{ $post->image ? asset($post->image) : 'images/default.png' }}">
                                         </a>
                                     </div>
                                     <div class="post-item-description">

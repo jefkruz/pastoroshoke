@@ -72,7 +72,7 @@
                             <div class="post-item-wrap">
                                 <div class="post-image">
                                     <a href="#">
-                                        <img alt="" src="{{ $post->image ? asset($post->image) : 'images/default.jpg' }}">
+                                        <img alt="" src="{{ $post->image ? asset($post->image) : 'images/default.png' }}">
                                     </a>
                                 </div>
                                 <div class="post-item-description">
