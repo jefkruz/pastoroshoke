@@ -60,7 +60,7 @@
     </header>
     <!-- end: Header -->
     <!-- Content -->
-    <section id="page-content" class="sidebar-right">
+    <section id="page-content" class="sidebar-right" style="background-color: #edd9f4">
         <div class="container">
             <div class="row">
                 <!-- content -->
