@@ -253,7 +253,7 @@
                 <!-- end: Gallery -->
             </div>
         </section>
-        <section>
+        <section style="background-color: #edd9f4">
             <div class="container">
 
                 <div class="carousel" data-items="3">
