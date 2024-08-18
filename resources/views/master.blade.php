@@ -79,7 +79,7 @@
 
 
             <!-- Slide 1 -->
-            <div class="slide background-image" style="background-image:url('images/slide1.png');">
+            <div class="slide background-image" style="background-image:url('images/slide2.png');">
                 <div class="container">
                     <div class="slide-captions text-end">
                         <!-- Captions -->
@@ -98,7 +98,7 @@
                 <div class="container">
                     <div class="slide-captions text-end">
                         <!-- Captions -->
-                        <span class="strong text-dark">Welcome, this is a tribute platform for</span>
+                        <span class="strong text-dark">Celebrating a life of Grace and Impact</span>
                         <h2 class="text-dark text-lg">ESTEEMED PASTOR <br>OSHOKE IMOAGENE</h2>
                         <span class="strong text-dark">1970 - 2024</span>
                         <a  href="{{route('tributes')}}" class="btn btn-dark">SEND TRIBUTE</a>
