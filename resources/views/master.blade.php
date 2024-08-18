@@ -85,7 +85,7 @@
                         <!-- Captions -->
                         <span class="text-dark"><strong>Welcome, this is a tribute platform for</strong></span>
                         <h2 class="text-dark text-lg">ESTEEMED PASTOR <br>OSHOKE IMOAGENE</h2>
-                        <span class=" text-dark"><strong>1970 - 2024</strong></span>
+                        <span class="strong text-dark">1970 - 2024</span>
                         <a  href="{{route('tributes')}}" class="btn btn-dark">SEND TRIBUTE</a>
                         <!-- end: Captions -->
                     </div>
@@ -100,7 +100,7 @@
                         <!-- Captions -->
                         <span class="text-dark"><strong>Celebrating a life of Grace and Impact</strong></span>
                         <h2 class="text-dark text-lg">ESTEEMED PASTOR <br>OSHOKE IMOAGENE</h2>
-                        <span class=" text-dark"><strong>1970 - 2024</strong></span>
+                        <span class="strong text-dark">1970 - 2024</span>
                         <a  href="{{route('tributes')}}" class="btn btn-dark">SEND TRIBUTE</a>
                         <!-- end: Captions -->
                     </div>
@@ -140,7 +140,7 @@
                                     <div class="row  m-b-50">
                                         <div class="col-lg-3">
                                             <div class="heading-text heading-section">
-                                                <h2 style="font-size: 45px">ABOUT</h2>
+{{--                                                <h2 style="font-size: 45px">ABOUT</h2>--}}
 
                                                 <img   class="img-thumbnail" src="{{url('images/him.jpeg')}}">
                                                 <img   class="img-thumbnail" src="{{url('images/he.jpeg')}}">

@@ -1361,7 +1361,7 @@ ul.bullets { list-style: inside; }
 
 strong { font-weight: 600; }
 
-del { -webkit-text-decoration-line: line-through; text-decoration-line: line-through; }
+/*del { -webkit-text-decoration-line: line-through; text-decoration-line: line-through; }*/
 
 a:not(.btn):not(.badge):hover, a:not(.btn):not(.badge):focus, a:not(.btn):not(.badge):active { text-decoration: none; outline: none; color: #2250fc; }
 
