@@ -1361,7 +1361,7 @@ ul.bullets { list-style: inside; }
 
 strong { font-weight: 600; }
 
-/*del { -webkit-text-decoration-line: line-through; text-decoration-line: line-through; }*/
+del { -webkit-text-decoration-line: line-through; text-decoration-line: line-through; }
 
 a:not(.btn):not(.badge):hover, a:not(.btn):not(.badge):focus, a:not(.btn):not(.badge):active { text-decoration: none; outline: none; color: #2250fc; }
 
@@ -1411,7 +1411,7 @@ a:not(.btn):not(.badge):not(.btn):not([href]):not([tabindex]) { color: #3c4043; 
 
 .inspiro-slider .slide .slide-captions > p { color: #fff; font-size: 20px; font-weight: 400; margin-bottom: 40px; }
 
-.inspiro-slider .slide .slide-captions .text-dark.strong::after, .inspiro-slider .slide .slide-captions.text-dark .strong::after { border-top-color: #111; }
+/*.inspiro-slider .slide .slide-captions .text-dark.strong::after, .inspiro-slider .slide .slide-captions.text-dark .strong::after { border-top-color: #111; }*/
 
 .inspiro-slider .slide .slide-captions.text-left .strong::after { margin-left: 0; margin-right: auto; }
 

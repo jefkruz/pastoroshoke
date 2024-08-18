@@ -83,7 +83,7 @@
                 <div class="container">
                     <div class="slide-captions text-end">
                         <!-- Captions -->
-                        <span class="text-dark"><strong>Welcome, this is a tribute platform for</strong></span>
+                        <span class="strong text-dark">Welcome, this is a tribute platform for</span>
                         <h2 class="text-dark text-lg">ESTEEMED PASTOR <br>OSHOKE IMOAGENE</h2>
                         <span class="strong text-dark">1970 - 2024</span>
                         <a  href="{{route('tributes')}}" class="btn btn-dark">SEND TRIBUTE</a>
@@ -98,7 +98,7 @@
                 <div class="container">
                     <div class="slide-captions text-end">
                         <!-- Captions -->
-                        <span class="text-dark"><strong>Celebrating a life of Grace and Impact</strong></span>
+                        <span class="strong text-dark">Celebrating a life of Grace and Impact</span>
                         <h2 class="text-dark text-lg">ESTEEMED PASTOR <br>OSHOKE IMOAGENE</h2>
                         <span class="strong text-dark">1970 - 2024</span>
                         <a  href="{{route('tributes')}}" class="btn btn-dark">SEND TRIBUTE</a>
