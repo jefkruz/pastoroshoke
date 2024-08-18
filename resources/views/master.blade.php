@@ -111,7 +111,7 @@
 
         </div>
         <!--end: Inspiro Slider -->
-        <section id="page-content" class="no-padding">
+        <section id="page-content" class="no-padding" style="background-color: #edd9f4">
 
             <div class="container">
                 <div class="row">
@@ -231,7 +231,7 @@
                 </div>
             </div>
         </section>
-        <section id="page-content">
+        <section id="page-content" style="background-color: #edd9f4">
             <div class="container">
                 <!-- Gallery -->
                 <div class="carousel" data-items="3" data-dots="false" data-lightbox="gallery">
