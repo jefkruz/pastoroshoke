@@ -362,6 +362,28 @@
             </div>
         </section>
         <!-- end: GET IN TOUCH -->
+        <!-- Modal Structure -->
+        <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="modal-label" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="modal-label">Allow Background Music?</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true">×</button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Your permission is needed to play background music on this website. Click below to allow playback.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button id="mute-btn" type="button" class="btn btn-danger" data-bs-dismiss="modal"><i class="icon-volume-x"></i> Mute</button>
+                        <button id="play-btn" type="button" class="btn btn-primary" data-bs-dismiss="modal"><i class="icon-volume-2"></i> Play Music</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <audio id="background-audio" src="{{url('images/audio.mp3')}}" loop></audio>
+
+
 
         <!-- FOOTER -->
         <footer class="inverted" id="footer">
@@ -387,6 +409,24 @@
     <!--Template functions-->
     <script src="{{asset('js/functions.js')}}"></script>
 
+    <script>
+        // Play and Mute button actions
+        document.getElementById('play-btn').addEventListener('click', function() {
+            var audio = document.getElementById('background-audio');
+            audio.play();
+        });
+
+        document.getElementById('mute-btn').addEventListener('click', function() {
+            var audio = document.getElementById('background-audio');
+            audio.pause();
+        });
+
+        // Show modal on page load
+        window.onload = function() {
+            var audioModal = new bootstrap.Modal(document.getElementById('modal'), {});
+            audioModal.show();
+        };
+    </script>
 </body>
 
 </html>
