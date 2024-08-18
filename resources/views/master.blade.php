@@ -63,6 +63,8 @@
                             <nav>
                                 <ul>
                                     <li><a href="{{route('index')}}">Home</a></li>
+                                    <li><a href="{{route('tributes')}}">Tributes</a></li>
+                                    <li><a href="{{route('index')}}">Watch Live</a></li>
 
                                 </ul>
                             </nav>
