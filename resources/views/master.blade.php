@@ -141,11 +141,14 @@
                                         <div class="col-lg-3">
                                             <div class="heading-text heading-section">
                                                 <h2>ABOUT</h2>
+                                                <img   class="img-thumbnail" src="{{url('images/him.jpeg')}}">
                                             </div>
                                         </div>
                                         <div class="col-lg-9">
                                             <div class="row">
-                                                <div class="col-lg-6">We celebrate the life and times of a kingdom addict, trail blazer, a decorated disciple of the Ministry, a man so full of love and so effusive of love, <strong>Highly Esteemed Pastor Oshoke Imoagene,</strong> who was the <strong>2nd Haven President of The Haven Nation from 2007 to 2015,</strong> went to be with the Lord on <strong>Tuesday July 23, 2024. </strong><br>
+                                                <div class="col-lg-6">
+
+                                                    We celebrate the life and times of a kingdom addict, trail blazer, a decorated disciple of the Ministry, a man so full of love and so effusive of love, <strong>Highly Esteemed Pastor Oshoke Imoagene,</strong> who was the <strong>2nd Haven President of The Haven Nation from 2007 to 2015,</strong> went to be with the Lord on <strong>Tuesday July 23, 2024. </strong><br>
                                                     <br>Pastor Oshoke was born on the <strong>9th of June 1970</strong> at <strong>Ibadan, Oyo State.</strong> <br> He was a very studious, hardworking and trail blazing student who went through school with excellent academic performances, bagging his BA in History at the age of 19 and his master’s degree in Industrial Labour Relations before he turned 22 <br><br>
                                                     Pastor Oshoke’s fast growth was also evidenced in his career. Kicking off in 1991, he rose quickly through the ranks in Human Resource Management and by 2008, he had become the Divisional Head, Human Capital Management and Corporate Resources at one of the notable banks in Nigeria. It is worthy of note that Pastor Oshoke mentored a great number of people in the banking industry, helping them find their feet and kick off their stellar careers.</div>
                                                 <div class="col-lg-6">Pastor Oshoke became a member of Christ Embassy in <strong>Ibadan in 1995.</strong> He joined The Haven that same year and became The Haven Governor, <strong>CE Ibadan in 1997.</strong><br>
