@@ -83,9 +83,9 @@
                 <div class="container">
                     <div class="slide-captions text-end">
                         <!-- Captions -->
-                        <span class="strong text-dark">Welcome, this is a tribute platform for</span>
+                        <span class="text-dark"><strong>Welcome, this is a tribute platform for</strong></span>
                         <h2 class="text-dark text-lg">ESTEEMED PASTOR <br>OSHOKE IMOAGENE</h2>
-                        <span class="strong text-dark">1970 - 2024</span>
+                        <span class=" text-dark"><strong>1970 - 2024</strong></span>
                         <a  href="{{route('tributes')}}" class="btn btn-dark">SEND TRIBUTE</a>
                         <!-- end: Captions -->
                     </div>
@@ -98,9 +98,9 @@
                 <div class="container">
                     <div class="slide-captions text-end">
                         <!-- Captions -->
-                        <span class="strong text-dark">Celebrating a life of Grace and Impact</span>
+                        <span class="text-dark"><strong>Celebrating a life of Grace and Impact</strong></span>
                         <h2 class="text-dark text-lg">ESTEEMED PASTOR <br>OSHOKE IMOAGENE</h2>
-                        <span class="strong text-dark">1970 - 2024</span>
+                        <span class=" text-dark"><strong>1970 - 2024</strong></span>
                         <a  href="{{route('tributes')}}" class="btn btn-dark">SEND TRIBUTE</a>
                         <!-- end: Captions -->
                     </div>
@@ -140,10 +140,11 @@
                                     <div class="row  m-b-50">
                                         <div class="col-lg-3">
                                             <div class="heading-text heading-section">
-                                                <h2>ABOUT</h2>
+                                                <h2 style="font-size: 45px">ABOUT</h2>
 
                                                 <img   class="img-thumbnail" src="{{url('images/him.jpeg')}}">
                                                 <img   class="img-thumbnail" src="{{url('images/he.jpeg')}}">
+                                                <img   class="img-thumbnail" src="{{url('images/himm.jpeg')}}">
                                             </div>
                                         </div>
                                         <div class="col-lg-9">
