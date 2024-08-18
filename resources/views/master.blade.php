@@ -141,7 +141,9 @@
                                         <div class="col-lg-3">
                                             <div class="heading-text heading-section">
                                                 <h2>ABOUT</h2>
+
                                                 <img   class="img-thumbnail" src="{{url('images/him.jpeg')}}">
+                                                <img   class="img-thumbnail" src="{{url('images/he.jpeg')}}">
                                             </div>
                                         </div>
                                         <div class="col-lg-9">
