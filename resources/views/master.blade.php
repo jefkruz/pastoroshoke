@@ -252,7 +252,7 @@
                             <div class="portfolio-description">
                                 <a title="Paper Pouch!" data-lightbox="gallery-image" href="{{$image->url}}" class="btn btn-light btn-roundeded">Zoom</a>
                             </div>
-                            {{$image->id}}
+{{--                            {{$image->id}}--}}
                         </div>
                     </div>
                     @endforeach

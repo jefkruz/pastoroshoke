@@ -15,7 +15,7 @@ class MainController extends Controller
     {
         $data['tributes'] = Post::latest()->get();
         $data['images'] = Image::all();
-        $data['videos'] = Video::all();
+        $data['videos'] = Video::latest()->get();
         return view('master',$data);
     }
 
