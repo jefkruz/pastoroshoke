@@ -94,7 +94,7 @@
                                         <span class="post-meta-comments"><a href="{{route('readTributes',$post->id)}}"><i class="fa fa-comments-o"></i>0 Comments</a></span>
                                         <h2><a href="{{route('readTributes',$post->id)}}">{{ ucwords($post->first_name .' ' . $post->last_name) }}</a></h2>
                                         <p>
-                                            {{ \Illuminate\Support\Str::words($post->tribute, 200, '...') }}
+                                            {{ (Str::limit($post->tribute, 150)) }}
                                         </p>
                                         <a href="{{route('readTributes',$post->id)}}" class="item-link">Read More <i class="icon-chevron-right"></i></a>
                                     </div>
