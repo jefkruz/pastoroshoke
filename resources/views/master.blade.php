@@ -100,7 +100,7 @@
                 <div class="container">
                     <div class="slide-captions text-end">
                         <!-- Captions -->
-                        <span class="strong text-dark">Celebrating a life of Grace and Impact</span>
+                        <span class="strong text-dark">Celebrating a life of Faith and Impact</span>
                         <h2 class="text-dark text-lg">ESTEEMED PASTOR <br>OSHOKE IMOAGENE</h2>
                         <span class="strong text-dark">1970 - 2024</span>
                         <a  href="{{route('tributes')}}" class="btn btn-dark">SEND TRIBUTE</a>
@@ -252,6 +252,7 @@
                             <div class="portfolio-description">
                                 <a title="Paper Pouch!" data-lightbox="gallery-image" href="{{$image->url}}" class="btn btn-light btn-roundeded">Zoom</a>
                             </div>
+                            {{$image->id}}
                         </div>
                     </div>
                     @endforeach
