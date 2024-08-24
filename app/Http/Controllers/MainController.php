@@ -87,9 +87,6 @@ class MainController extends Controller
          'first_name' => 'required',
          'last_name' => 'required',
          'phone' => 'required',
-         'city' => 'required',
-         'state' => 'required',
-         'country' => 'required',
          'tribute' => 'required',
      ]);
 
