@@ -86,7 +86,6 @@ class MainController extends Controller
      $request->validate([
          'first_name' => 'required',
          'last_name' => 'required',
-         'phone' => 'required',
          'tribute' => 'required',
      ]);
 

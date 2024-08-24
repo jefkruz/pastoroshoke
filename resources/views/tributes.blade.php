@@ -91,7 +91,7 @@
                                     </div>
                                     <div class="post-item-description">
                                         <span class="post-meta-date"><i class="fa fa-calendar-o"></i>{{ $post->created_at->format('M d, Y') }}</span>
-                                        <span class="post-meta-comments"><a href="{{route('readTributes',$post->id)}}"><i class="fa fa-comments-o"></i>0 Comments</a></span>
+                                        <span class="post-meta-comments"><a href="{{route('readTributes',$post->id)}}"><i class="fa fa-comments-o"></i></a></span>
                                         <h2><a href="{{route('readTributes',$post->id)}}">{{ ucwords($post->first_name .' ' . $post->last_name) }}</a></h2>
                                         <p>
                                             {{ (Str::limit($post->tribute, 150)) }}

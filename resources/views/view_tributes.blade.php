@@ -79,7 +79,7 @@
                                     <h2>By: {{ ucwords($post->first_name .' ' . $post->last_name) }}</h2>
                                     <div class="post-meta">
                                         <span class="post-meta-date"><i class="fa fa-calendar-o"></i>Jan 21, 2017</span>
-                                        <span class="post-meta-comments"><a href=""><i class="fa fa-comments-o"></i>0 Comments</a></span>
+                                        <span class="post-meta-comments"><a href=""><i class="fa fa-comments-o"></i></a></span>
 
                                     </div>
                                     <p>{{$post->tribute}}</p>

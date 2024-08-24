@@ -321,11 +321,11 @@
                             <div class="row">
                                 <div class="form-group col-md-6">
                                     <label for="name">First Name<span class="text-danger ">*</span></label>
-                                    <input type="text" aria-required="true" name="first_name" class="form-control " placeholder="Enter your First Name">
+                                    <input type="text" required name="first_name" class="form-control " placeholder="Enter your First Name">
                                 </div>
                                 <div class="form-group col-md-6">
                                     <label for="name">Last Name<span class="text-danger">*</span></label>
-                                    <input type="text" aria-required="true" name="last_name" class="form-control" placeholder="Enter your Last Name">
+                                    <input type="text" required name="last_name" class="form-control" placeholder="Enter your Last Name">
                                 </div>
 
                             </div>
