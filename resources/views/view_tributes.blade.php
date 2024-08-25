@@ -78,7 +78,7 @@
                                 <div class="post-item-description">
                                     <h2>By: {{ ucwords($post->first_name .' ' . $post->last_name) }}</h2>
                                     <div class="post-meta">
-                                        <span class="post-meta-date"><i class="fa fa-calendar-o"></i>J{{ $post->created_at->format('M d, Y') }}</span>
+                                        <span class="post-meta-date"><i class="fa fa-calendar-o"></i>{{ $post->created_at->format('M d, Y') }}</span>
                                         <span class="post-meta-comments"><a href=""><i class="fa fa-comments-o"></i></a></span>
 
                                     </div>
