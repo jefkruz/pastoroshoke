@@ -81,7 +81,7 @@
 
 
             <!-- Slide 1 -->
-            <div class="slide background-image" style="background-image:url('images/slide2.png');">
+            <div class="slide background-image" style="background-image:url('images/slider4.png');">
                 <div class="container">
                     <div class="slide-captions text-end">
                         <!-- Captions -->
@@ -96,7 +96,7 @@
             <!-- end: Slide 1 -->
 
             <!-- Slide 2 -->
-            <div class="slide" style="background-image:url('images/slide2.png');">
+            <div class="slide" style="background-image:url('images/slider5.png');">
                 <div class="container">
                     <div class="slide-captions text-end">
                         <!-- Captions -->
