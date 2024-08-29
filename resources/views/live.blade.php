@@ -13,6 +13,8 @@
     <!-- Stylesheets & Fonts -->
     <link href="{{asset('css/plugins.css')}}" rel="stylesheet">
     <link href="{{asset('css/style.css')}}" rel="stylesheet">
+    <link href="https://vjs.zencdn.net/8.3.0/video-js.css" rel="stylesheet" />
+
 </head>
 
 <body>
@@ -68,62 +70,59 @@
 
                 <!-- post content -->
                 <div class="content col-lg-9">
-                    @if(session('message'))
-                        <div role="alert" class="alert alert-success alert-dismissible">
-                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"> </button>
-                            <strong><i class="fa fa-check-circle"></i> Thank You!</strong> {{session('message')}} </div>
-                    @endif
-
-                        @if(session('error'))
-                            <div role="alert" class="alert alert-danger alert-dismissible">
+                        @if(session('message'))
+                            <div role="alert" class="alert alert-success alert-dismissible">
                                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"> </button>
-                                <strong><i class="fa fa-exclamation-circle"></i> Sorry!</strong> {{session('error')}} </div>
+                                <strong><i class="fa fa-check-circle"></i> Thank You!</strong> {{session('message')}} </div>
                         @endif
-                    <!-- Blog -->
-                    <div id="blog" class="grid-layout post-3-columns m-b-30" data-item="post-item">
-                        <!-- Post item-->
-                        @foreach($tributes as $post)
-                            <div class="post-item border">
-                                <div class="post-item-wrap">
-                                    <div class="post-image">
-                                        <a href="{{route('readTributes',$post->id)}}">
-                                            <img alt="{{ $post->first_name }}" src="{{ $post->image ? asset($post->image) : 'images/default.png' }}">
-                                        </a>
-                                    </div>
-                                    <div class="post-item-description">
-                                        <span class="post-meta-date"><i class="fa fa-calendar-o"></i>{{ $post->created_at->format('M d, Y') }}</span>
-                                        <span class="post-meta-comments"><a href="{{route('readTributes',$post->id)}}"><i class="fa fa-comments-o"></i></a></span>
-                                        <h2><a href="{{route('readTributes',$post->id)}}">{{ ucwords($post->first_name .' ' . $post->last_name) }}</a></h2>
-                                        <p>
-                                            {{ (Str::limit($post->tribute, 150)) }}
-                                        </p>
-                                        <a href="{{route('readTributes',$post->id)}}" class="item-link">Read More <i class="icon-chevron-right"></i></a>
+
+                            @if(session('error'))
+                                <div role="alert" class="alert alert-danger alert-dismissible">
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"> </button>
+                                    <strong><i class="fa fa-exclamation-circle"></i> Sorry!</strong> {{session('error')}} </div>
+                            @endif
+                        <!-- Blog -->
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4>WATCH LIVE</h4>
+                                </div>
+                                <div class="card-body border-top">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <video id="video" class="video-js"></video>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                    @endforeach
 
-                    <!-- end: Post item-->
+                            <div class="container mt-3">
 
-                        <!-- end: Post item-->
+                                <div class="carousel" data-items="3">
+                                    <!-- Post item-->
+                                    @foreach($tributes as $post)
+                                        <div class="post-item border">
+                                            <div class="post-item-wrap">
+                                                <div class="post-image">
+                                                    <a href="#">
+                                                        <img alt="" src="{{url('images/default.png')}}"></a>
+                                                </div>
+                                                <div class="post-item-description">
+                                                    <span class="post-meta-date"><i class="fa fa-calendar-o"></i>{{ $post->created_at->format('M d, Y') }}</span>
+                                                    {{--                                <span class="post-meta-comments"><a href=""><i class="fa fa-comments-o"></i>0--}}
+                                                    {{--                                                Comments</a></span>--}}
+                                                    <h2><a href="{{route('readTributes',$post->id)}}">{{ ucwords($post->first_name .' ' . $post->last_name) }}</a></h2>
+                                                    <p>
+                                                        {{ (Str::limit($post->tribute, 150)) }}
+                                                    </p>
+                                                    <a href="{{route('readTributes',$post->id)}}" class="item-link">Read More <i class="icon-chevron-right"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                @endforeach
+                                <!-- end: Post item-->
 
-                    </div>
-                    <!-- end: Blog -->
-                    <!-- Pagination -->
-{{--                    @if(!$tributes->count() ==0)--}}
-{{--                    <ul class="pagination">--}}
-{{--                        <li class="page-item"><a class="page-link" href="#"><i class="fa fa-angle-left"></i></a></li>--}}
-{{--                        <li class="page-item"><a class="page-link" href="#">1</a></li>--}}
-{{--                        <li class="page-item"><a class="page-link" href="#">2</a></li>--}}
-{{--                        <li class="page-item active"><a class="page-link" href="#">3</a></li>--}}
-{{--                        <li class="page-item"><a class="page-link" href="#">4</a></li>--}}
-{{--                        <li class="page-item"><a class="page-link" href="#">5</a></li>--}}
-{{--                        <li class="page-item"><a class="page-link" href="#"><i class="fa fa-angle-right"></i></a></li>--}}
-{{--                    </ul>--}}
-{{--                    @endif--}}
-
-
-                    <!-- end: Pagination -->
+                                </div>
+                            </div>
                 </div>
                 <!-- end: post content -->
                 <!-- Sidebar-->
@@ -204,7 +203,27 @@
 <!--Template functions-->
 <script src="{{asset('js/functions.js')}}"></script>
 
+<script src="https://vjs.zencdn.net/8.3.0/video.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const player = videojs('video', {
+            controls: true,
+            fluid: true,
+            liveui: true
+        });
 
+        const vidSource = 'https://vcpout-lw-wdc-01-sp.internetmultimediaonline.org/phronesis/celvz4846zdlive/playlist.m3u8';
+
+
+        player.src({
+            src: vidSource,
+            type: 'application/x-mpegURL'
+        });
+
+        player.play();
+    });
+
+</script>
 
 </body>
 

@@ -17,6 +17,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [MainController::class, 'index'])->name('index');
 Route::get('tributes', [MainController::class, 'tributes'])->name('tributes');
+Route::get('live', [MainController::class, 'live'])->name('live');
 Route::post('tributes', [MainController::class, 'submitTribute'])->name('submitTribute');
 Route::get('read/tribute/{id}', [MainController::class, 'readTributes'])->name('readTributes');
 Route::post('upload/images', [MainController::class, 'uploadImages'])->name('uploadImages');

@@ -24,6 +24,12 @@ class MainController extends Controller
         $data['tributes'] = Post::latest()->get();
         return view('tributes', $data);
     }
+
+    public function live()
+    {
+        $data['tributes'] = Post::latest()->get();
+        return view('live', $data);
+    }
     public function readTributes($id)
     {
         $post = Post::findOrFail($id);
